@@ -18,6 +18,14 @@ namespace AoC2020
             _inputValues.Sort();
         }
 
+        public SetSearcher() : base(0) {
+            _inputValues = new List<int>();
+        }
+
+        public Tuple<long, long> HashSetFind(List<long> input, long target) {
+            return HashSetSubsetSum(input, target);
+        }
+
         public int Part1Original() {
             int i, idx = -1;
             for (i = 0; i < _inputValues.Count; i++) {
@@ -114,6 +122,25 @@ namespace AoC2020
                     continue;
                 if (seen.Contains(targetSum - set[i])) {
                     pair = new Tuple<int, int>(set[i], targetSum - set[i]);
+                    break;
+                }
+                seen.Add(set[i]);
+            }
+            return pair;
+        }
+
+        private Tuple<long, long> HashSetSubsetSum(List<long> set, long targetSum, int ignoreIdx = -1)
+        {
+            HashSet<long> seen = new HashSet<long>(set.Count);
+            Tuple<long, long> pair = null;
+            int i;
+            for (i = 0; i < set.Count; i++)
+            {
+                if (i == ignoreIdx)
+                    continue;
+                if (seen.Contains(targetSum - set[i]))
+                {
+                    pair = new Tuple<long, long>(set[i], targetSum - set[i]);
                     break;
                 }
                 seen.Add(set[i]);

@@ -5,11 +5,15 @@ namespace AoC2020 {
         static void Main(string[] args) {
             Console.WriteLine("Starting Advent of Code 2020");
             Day1();
-            // Day2();
-            // Day3();
-            // Day4();
-            // Day5();
+            Day2();
+            Day3();
+            Day4();
+            Day5();
             Day6();
+            Day7();
+            Day8();
+            Day9();
+            Day10();
         }
 
         static void Day1() {
@@ -37,18 +41,41 @@ namespace AoC2020 {
             Console.WriteLine($"Day 4 Part 2: {p.Part2()}");
         }
 
-        static void Day5()
-        {
+        static void Day5() {
             SeatReader s = new SeatReader("inputs/d5p1.txt");
             Console.WriteLine($"Day 5 Part 1: {s.Part1()}");
             Console.WriteLine($"Day 5 Part 2: {s.Part2()}");
         }
 
-        static void Day6()
-        {
+        static void Day6() {
             CDFGroupAggregator g = new CDFGroupAggregator("inputs/d6p1.txt");
             Console.WriteLine($"Day 6 Part 1: {g.Part1()}");
             Console.WriteLine($"Day 6 Part 2: {g.Part2()}");
+        }
+
+        static void Day7() {
+            BagColorTreeAnalyzer b = new BagColorTreeAnalyzer("inputs/d7p1.txt");
+            Console.WriteLine($"Day 7 Part 1: {b.Part1()}");
+            Console.WriteLine($"Day 7 Part 2: {b.Part2()}");
+        }
+
+        static void Day8() {
+            BootCodeExecutor b = new BootCodeExecutor("inputs/d8p1.txt");
+            Console.WriteLine($"Day 8 Part 1: {b.Part1()}");
+            Console.WriteLine($"Day 8 Part 2: {b.Part2()}");
+            Console.WriteLine($"Day 8 Part 2 v2: {b.Part2v2()}");
+        }
+
+        static void Day9() {
+            XMASReader x = new XMASReader("inputs/d9p1.txt");
+            Console.WriteLine($"Day 9 Part 1: {x.Part1()}");
+            Console.WriteLine($"Day 9 Part 2: {x.Part2()}");
+        }
+
+        static void Day10() {
+            JoltChainer j = new JoltChainer("inputs/d10p1.txt");
+            Console.WriteLine($"Day 10 Part 1: {j.Part1()}");
+            Console.WriteLine($"Day 10 Part 2: {j.Part2()}");
         }
     }
 }
