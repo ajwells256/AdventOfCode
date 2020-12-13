@@ -4,16 +4,7 @@ namespace AoC2020 {
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("Starting Advent of Code 2020");
-            Day1();
-            Day2();
-            Day3();
-            Day4();
-            Day5();
-            Day6();
-            Day7();
-            Day8();
-            Day9();
-            Day10();
+            Day12();
         }
 
         static void Day1() {
@@ -76,6 +67,18 @@ namespace AoC2020 {
             JoltChainer j = new JoltChainer("inputs/d10p1.txt");
             Console.WriteLine($"Day 10 Part 1: {j.Part1()}");
             Console.WriteLine($"Day 10 Part 2: {j.Part2()}");
+        }
+
+        static void Day11() {
+            SeatSimulator s = new SeatSimulator("inputs/d11test.txt",2);
+            Console.WriteLine($"Day 11 Part 1: {s.Part1()}");
+            Console.WriteLine($"Day 11 Part 2: {s.Part2()}");
+        }
+
+        static void Day12() {
+            ManhattanCalculator m = new ManhattanCalculator("inputs/d12.txt", 2);
+            Console.WriteLine($"Day 12 Part 1: {m.Part1()}");
+            Console.WriteLine($"Day 12 Part 2: {m.Part2()}");
         }
     }
 }

@@ -25,5 +25,11 @@ namespace AoC2020
                 Console.WriteLine(output);
             }
         }
+
+        public void DebugWrite(object output, int level = 1) {
+            if (_debugLevel >= level){
+                Console.Write(output);
+            }
+        }
     }
 }
