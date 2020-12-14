@@ -4,7 +4,7 @@ namespace AoC2020 {
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("Starting Advent of Code 2020");
-            Day12();
+            Day11();
         }
 
         static void Day1() {
@@ -70,7 +70,7 @@ namespace AoC2020 {
         }
 
         static void Day11() {
-            SeatSimulator s = new SeatSimulator("inputs/d11test.txt",2);
+            SeatSimulator s = new SeatSimulator("inputs/d11.txt",2);
             Console.WriteLine($"Day 11 Part 1: {s.Part1()}");
             Console.WriteLine($"Day 11 Part 2: {s.Part2()}");
         }
@@ -79,6 +79,17 @@ namespace AoC2020 {
             ManhattanCalculator m = new ManhattanCalculator("inputs/d12.txt", 2);
             Console.WriteLine($"Day 12 Part 1: {m.Part1()}");
             Console.WriteLine($"Day 12 Part 2: {m.Part2()}");
+        }
+        static void Day13() {
+            BusScheduler b = new BusScheduler("inputs/d13.txt");
+            Console.WriteLine($"Day 13 Part 1: {b.Part1()}");
+            Console.WriteLine($"Day 13 Part 2: {b.Part2()}");
+        }
+
+        static void Day14() {
+            BusScheduler b = new BusScheduler("inputs/d13.txt");
+            Console.WriteLine($"Day 13 Part 1: {b.Part1()}");
+            Console.WriteLine($"Day 13 Part 2: {b.Part2()}");
         }
     }
 }
