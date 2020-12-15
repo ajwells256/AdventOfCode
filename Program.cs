@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AoC2020 {
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("Starting Advent of Code 2020");
-            Day11();
+            Day15();
         }
 
         static void Day1() {
@@ -90,6 +91,16 @@ namespace AoC2020 {
             BusScheduler b = new BusScheduler("inputs/d13.txt");
             Console.WriteLine($"Day 13 Part 1: {b.Part1()}");
             Console.WriteLine($"Day 13 Part 2: {b.Part2()}");
+        }
+
+        static void Day15() {
+            MemoryGame m = new MemoryGame();
+            Console.WriteLine($@"Day 15 Part 1: {m.PlayGame(
+                new List<int>(new int[] { 13, 16, 0, 12, 15, 1}),
+                2020)}");
+            Console.WriteLine($@"Day 15 Part 2: {m.PlayGame(
+                new List<int>(new int[] { 13, 16, 0, 12, 15, 1 }),
+                30000000)}");
         }
     }
 }
