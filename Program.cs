@@ -5,7 +5,7 @@ namespace AoC2020 {
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("Starting Advent of Code 2020");
-            Day15();
+            Day18();
         }
 
         static void Day1() {
@@ -101,6 +101,24 @@ namespace AoC2020 {
             Console.WriteLine($@"Day 15 Part 2: {m.PlayGame(
                 new List<int>(new int[] { 13, 16, 0, 12, 15, 1 }),
                 30000000)}");
+        }
+
+        static void Day16() {
+            TicketScanner t = new TicketScanner("inputs/d16.txt");
+            Console.WriteLine($@"Day 16 Part 1: {t.Part1()}");
+            Console.WriteLine($@"Day 16 Part 2: {t.Part2v2()}");
+        }
+
+        static void Day17() {
+            PocketDimension p = new PocketDimension("inputs/d17.txt");
+            Console.WriteLine($"Day 17 Part 1: {p.Part1()}");
+            Console.WriteLine($"Day 17 Part 2: {p.Part2()}");
+        }
+
+        static void Day18() {
+            ExpressionEvaluator e = new ExpressionEvaluator("inputs/d18.txt", 1);
+            Console.WriteLine($"Day 18 Part 1: {e.Part1()}");
+            Console.WriteLine($"Day 18 Part 2: {e.Part2()}");
         }
     }
 }
