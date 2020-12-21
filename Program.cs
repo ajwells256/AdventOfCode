@@ -5,7 +5,7 @@ namespace AoC2020 {
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("Starting Advent of Code 2020");
-            Day18();
+            Day21();
         }
 
         static void Day1() {
@@ -88,9 +88,9 @@ namespace AoC2020 {
         }
 
         static void Day14() {
-            BusScheduler b = new BusScheduler("inputs/d13.txt");
-            Console.WriteLine($"Day 13 Part 1: {b.Part1()}");
-            Console.WriteLine($"Day 13 Part 2: {b.Part2()}");
+            Docker d = new Docker("inputs/d14.txt");
+            Console.WriteLine($"Day 14 Part 1: {d.Part1()}");
+            Console.WriteLine($"Day 14 Part 2: {d.Part2()}");
         }
 
         static void Day15() {
@@ -119,6 +119,24 @@ namespace AoC2020 {
             ExpressionEvaluator e = new ExpressionEvaluator("inputs/d18.txt", 1);
             Console.WriteLine($"Day 18 Part 1: {e.Part1()}");
             Console.WriteLine($"Day 18 Part 2: {e.Part2()}");
+        }
+
+        // static void Day19() {
+        //     GrammarParser g = new GrammarParser("inputs/d19.txt", 1);
+        //     Console.WriteLine($"Day 19 Part 1: {g.Part1()}");
+        //     Console.WriteLine($"Day 19 Part 2: {g.Part2()}");
+        // }
+
+        static void Day20() {
+            ImageTileConstructor i = new ImageTileConstructor("inputs/d20.txt", 1);
+            Console.WriteLine($"Day 20 Part 1: {i.Part1()}");
+            Console.WriteLine($"Day 20 Part 2: {i.Part2()}");
+        }
+
+        static void Day21() {
+            IngredientParser i = new IngredientParser("inputs/d21.txt", 1);
+            Console.WriteLine($"Day 21 Part 1: {i.Part1()}");
+            Console.WriteLine($"Day 21 Part 2: {i.Part2()}");
         }
     }
 }
