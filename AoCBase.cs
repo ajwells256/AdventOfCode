@@ -4,7 +4,7 @@ namespace AoC2020
 {
     public class AoCBase
     {
-        private int _debugLevel;
+        protected int _debugLevel;
         /// <summary>
         /// A base class for the helper classes in this project.
         /// </summary>

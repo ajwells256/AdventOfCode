@@ -5,7 +5,7 @@ namespace AoC2020 {
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("Starting Advent of Code 2020");
-            Day21();
+            Day23();
         }
 
         static void Day1() {
@@ -137,6 +137,12 @@ namespace AoC2020 {
             IngredientParser i = new IngredientParser("inputs/d21.txt", 1);
             Console.WriteLine($"Day 21 Part 1: {i.Part1()}");
             Console.WriteLine($"Day 21 Part 2: {i.Part2()}");
+        }
+
+        static void Day23() {
+            CupSimulator c = new CupSimulator("459672813", 2);
+            Console.WriteLine($"Day 23 Part 1: {c.Part1()}");
+            Console.WriteLine($"Day 23 Part 2: {c.Part2()}");
         }
     }
 }
