@@ -1,2 +1,3 @@
-# AoC2020
-Solutions to the Advent of Code 2020
+# Advent Of Code
+
+These are my solutions Advent of Code, broken into years.
