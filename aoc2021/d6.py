@@ -20,7 +20,7 @@ def simulate(originals, days):
         result += 1 + fishy(days - 1 - originalFish)
     return result
 
-x = open("d6p1_input.txt")
+x = open("inputs/d6p1_input.txt")
 y = x.readlines()
 input = [z.rstrip("\n") for z in y]
 

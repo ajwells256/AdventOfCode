@@ -1,5 +1,5 @@
 
-x = open("d4p1_input.txt")
+x = open("inputs/d4p1_input.txt")
 y = x.readlines()
 input = [z.rstrip("\n") for z in y]
 

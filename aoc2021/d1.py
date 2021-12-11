@@ -1,5 +1,5 @@
 
-x = open("d1p1_input.txt")
+x = open("inputs/d1p1_input.txt")
 y = x.readlines()
 inp = [int(entry.rstrip("\n")) for entry in y]
 
