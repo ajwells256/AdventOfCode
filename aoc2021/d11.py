@@ -1,6 +1,6 @@
 
 
-x = open("inputs/d11example.txt")
+x = open("inputs/d11input.txt")
 y = x.readlines()
 input = [z.rstrip("\n") for z in y]
 
@@ -37,5 +37,14 @@ def simluate(grid):
 
 flashes = 0
 for i in range(100):
-    flashes += simluate(grid)
+    local_flashes = simluate(grid)
+    flashes += local_flashes
+    if (local_flashes == len(grid)*len(grid[0])):
+        print(f"All flash at step {i+1}")
 print(flashes)
+
+while flashes != len(grid) * len(grid[0]):
+    flashes = simluate(grid)
+    i += 1
+
+print(f"All flash at step {i+1}")
