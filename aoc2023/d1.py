@@ -27,15 +27,15 @@ def get_calibration(line: str, wmap: Dict[str,str] = {}) -> int:
         print(line)
         raise
 
-def part1() -> int:
-    puzzle = read_input(1,1)
+def part1(sample=False) -> int:
+    puzzle = read_input(1,1,sample)
     run_sum = 0
     for line in puzzle:
         run_sum += get_calibration(line)
     return run_sum
 
-def part2(part = 1) -> int:
-    puzzle = read_input(1,part)
+def part2(sample=False) -> int:
+    puzzle = read_input(1,1,sample)
     run_sum = 0
     wmap = {k:str(v) for k,v in numeric_word_map.items()}
     for line in puzzle:
