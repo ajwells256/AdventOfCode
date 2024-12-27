@@ -4,6 +4,7 @@
 
 # AoC inputs
 **/inputs/*
+**/samples/*
 
 # python stuff
 __pycache__/
