@@ -48,7 +48,7 @@ class Day1(Solution):
 if __name__ == "__main__":
     solution = Day1()
     if solution.sample:
-        assert solution.part1() == 11
-        assert solution.part2() == 31
+        assert solution.part1() == 11, solution.part1()
+        assert solution.part2() == 31, solution.part2()
     print(f"Part 1: {solution.part1()}")
     print(f"Part 2: {solution.part2()}")

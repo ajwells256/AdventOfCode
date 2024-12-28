@@ -25,21 +25,21 @@ def find_part_numbers(current, neighbors, memo):
     if not match("\d", c_val) or x == 0:
         if len(memo["sb"]) > 0 and memo["vp"]:
             part_num = int(memo["sb"])
-            memo["parts"].append(part_num) 
+            memo["parts"].append(part_num)
             px,py,p_val = memo["p"]
             if p_val == "*":
                 cord = (px,py)
                 if cord in memo["gears"]:
                     memo["gears"][cord].append(part_num)
                 else:
-                    memo["gears"][cord] = [part_num] 
+                    memo["gears"][cord] = [part_num]
         memo["sb"] = ""
         memo["vp"] = False
-    
+
     if c_val != '.':
         if match("\d", c_val):
             memo["sb"] += c_val
-            
+
             # look for a part in the vicinity of this number
             # only if it's not already validated as a part number
             if not memo["vp"]:
