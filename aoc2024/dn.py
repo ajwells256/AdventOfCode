@@ -27,7 +27,7 @@ class DayN(Solution):
         pass
 
 if __name__ == "__main__":
-    solution = DayN()
+    solution = DayN(True)
     if solution.sample:
         if (part1 := solution.part1()) is not None:
             assert part1 == 1928, part1

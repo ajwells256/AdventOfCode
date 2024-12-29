@@ -22,8 +22,8 @@ class Day3(Solution):
         self.sample = sample
         self.part2_input_index = 1
 
-    def _calculate_instructions(self, input: str) -> int:
-        instructions = finditer(r"mul\((\d{1,3}),(\d{1,3})\)", input)
+    def _calculate_instructions(self, input_lines: str) -> int:
+        instructions = finditer(r"mul\((\d{1,3}),(\d{1,3})\)", input_lines)
         return sum(int(instruction.group(1)) * int(instruction.group(2)) for instruction in instructions)
 
     def part1(self) -> int:
